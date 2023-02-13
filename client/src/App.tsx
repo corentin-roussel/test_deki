@@ -11,6 +11,7 @@ export default function App() {
 
 	const sayHello = async () => {
 		const message = await getHelloWorld();
+
 		setMessage(message);
 	};
 

@@ -26,3 +26,4 @@ yarn-error.log*
 server/yarn.lock
 server/package-lock.json
 client/yarn.lock
+node_modules

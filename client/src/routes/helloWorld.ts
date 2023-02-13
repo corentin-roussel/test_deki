@@ -9,3 +9,4 @@ export async function getHelloWorld() {
 
 	return response.data.message;
 }
+

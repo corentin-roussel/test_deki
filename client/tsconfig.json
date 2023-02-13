@@ -3,7 +3,7 @@
 		"target": "es5",
 		"lib": ["es5", "es6", "dom", "dom.iterable", "esnext"],
 		"jsx": "react-jsx",
-		"allowJs": false,
+		"allowJs": true,
 		"skipLibCheck": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
