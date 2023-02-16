@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { getHelloWorld } from './routes/helloWorld';
+import { getUserList } from './routes/userList';
 import { Button, Layout, Space } from 'antd';
 import { headerStyle, contentStyle } from './styles/app.style';
 import InfoModal from './components/InfoModal';
@@ -7,7 +8,14 @@ import Typography from 'antd/es/typography/Typography';
 
 export default function App() {
 	const [message, setMessage] = useState('');
+	const [userList, setData] = useState([]);
 	const { Header, Content } = Layout;
+
+	const displayList = async () => {
+		const datas = await getUserList();
+
+		setData(datas);
+	}
 
 	const sayHello = async () => {
 		const message = await getHelloWorld();
@@ -26,6 +34,9 @@ export default function App() {
 					<InfoModal />
 				</Header>
 				<Content style={contentStyle}>Add the user list.</Content>
+				<Button type="primary"	onClick={displayList}>
+
+				</Button>
 			</Layout>
 		</Space>
 	);

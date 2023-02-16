@@ -1,11 +1,13 @@
 import express, { Express, Request, Response } from 'express';
+import {datas} from '../../server/src/datas/index'
 import cors from 'cors';
 
 
 
 const app: Express = express();
-app.use(cors());
-const port = 3000;
+app.options('*', cors({ origin: 'http://localhost:3000', optionsSuccessStatus: 200 }));
+app.use(cors({ origin: 'http://localhost:3000', optionsSuccessStatus: 200 }));
+const port = 8080;
 
 // Route exemple
 app.get('/helloworld', (_req: Request, res: Response) => {
@@ -16,7 +18,7 @@ app.get('/helloworld', (_req: Request, res: Response) => {
 // Don't forget to use the user type
 
 app.get('/users', (_req: Request, res: Response) => {
-	res.json({ datas: 'datas'})
+	res.json({ userList: datas})
 })
 
 // Bonus:

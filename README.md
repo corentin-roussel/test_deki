@@ -12,5 +12,5 @@ npm start pour start le script dans la partie client.
 
 Essayer d'établir une route et la connecté au front afin d'afficher la liste des user
 
-erreur de cors name AxiosError code err_network probléme de cros impossible de régler le probléme même en changeant les ports de  axios et cros.
+erreur de cors name AxiosError code err_network probléme de cros impossible de régler le probléme même en changeant les ports de  axios et cros impossible d'utiliser les requêtes get donc d'afficher .
 
